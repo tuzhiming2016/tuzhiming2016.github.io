@@ -753,7 +753,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 </div>
 
                 <div class="introduction center-align" data-aos="fade-up">
-                    我是湖南大学机械与运载工程学院2016级本科生,现已经推免到国防科技大学的无人系统研究所，加入了车辆主动安全实验室，研究方向是智能车辆的决策规划与控制技术，欢迎大家与我交流！
+                    我是湖南大学车辆工程2016级本科生，现已经推免到国防科技大学的无人系统研究所，加入了车辆主动安全实验室，研究方向是智能车辆的决策规划与控制技术，欢迎大家与我交流！
                 </div>
 
                 <style type="text/css">
@@ -881,7 +881,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["Control","Python","Hexo","Github","博客","Translation","Numerical Analysis","Matlab"]
+                data: ["Control","Python","Translation","Hexo","Github","博客","Numerical Analysis","Matlab"]
             }
         ],
         yAxis: [
@@ -1068,7 +1068,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
+        var diffDays = Math.floor((diff / days) - diffYears * 365) ;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
