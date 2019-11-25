@@ -955,7 +955,7 @@ import nump
         <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019 洪卫. 
+            Copyright&copy; 2019 涂志明. 
 
             <br>
             <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
@@ -978,7 +978,7 @@ import nump
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5.4k</span> 字
+                <span class="white-color">5.7k</span> 字
             
 
             
@@ -1049,7 +1049,7 @@ import nump
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
@@ -1149,6 +1149,24 @@ $(function () {
                     document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
                 }
             </script>
+        
+
+        <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+        
+            <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+  WIDGET = {FID: '1tFpFZ5Mtj'}
+</script>
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+  }
+  </script>
+
         
 
         <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->

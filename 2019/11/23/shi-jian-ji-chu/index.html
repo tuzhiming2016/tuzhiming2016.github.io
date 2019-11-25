@@ -751,7 +751,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        936
+                        988
                     </div>
                     
 
@@ -812,7 +812,25 @@
 <p>3.布置形式，空间布置</p>
 <p>4.抗干扰控制</p>
 <h2 id="平台框架"><a href="#平台框架" class="headerlink" title="平台框架"></a>平台框架</h2><p> 实时操作系统（RTOS）是指当外界事件或数据产生时，能够接受并以足够快的速度予以处理，其处理的结果又能在规定的时间之内来控制生产过程或对处理系统做出快速响应，调度一切可利用的资源完成实时任务，并控制所有实时任务协调一致运行的操作系统。提供及时响应和高可靠性是其主要特点。 </p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -924,10 +942,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.bmp" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.bmp" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1204,10 +1222,11 @@ zip(xp
 </main>
 
 
+
         <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019 洪卫. 
+            Copyright&copy; 2019 涂志明. 
 
             <br>
             <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
@@ -1230,7 +1249,7 @@ zip(xp
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5.4k</span> 字
+                <span class="white-color">5.7k</span> 字
             
 
             
@@ -1301,7 +1320,7 @@ zip(xp
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
@@ -1401,6 +1420,24 @@ $(function () {
                     document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
                 }
             </script>
+        
+
+        <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+        
+            <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+  WIDGET = {FID: '1tFpFZ5Mtj'}
+</script>
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+  }
+  </script>
+
         
 
         <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->

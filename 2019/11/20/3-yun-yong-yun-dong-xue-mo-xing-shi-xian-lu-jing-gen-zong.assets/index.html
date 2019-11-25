@@ -752,7 +752,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        971
+                        1k
                     </div>
                     
 
@@ -787,7 +787,25 @@
 <p>应用这个公式在前轮的约束中，根据等式1计算出$\dot{\theta}$<br>$$<br>\begin{aligned}  \dot{\theta}&amp;=\frac{\dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)}{L \cos (\delta)} \ &amp;=\frac{v \cos (\theta)(\sin (\theta) \cos (\delta)+\cos (\theta) \sin (\delta))}{L \cos (\delta)} \end{aligned}</p>
 <p>\<br>\begin{aligned} &amp;-\frac{v \sin (\theta)(\cos (\theta) \cos (\delta)-\sin (\theta) \sin (\delta))}{L \cos (\delta)} \=&amp; \frac{v\left(\cos ^{2}(\theta)+\sin ^{2}(\theta)\right) \sin (\delta)}{L \cos (\delta)} \=&amp; \frac{v \tan (\delta)}{L} \end{aligned}<br>$$<br> 车辆的瞬时曲率半径$R$决定从$v$和$\dot{\theta}$推导出的$\theta$前面介绍的等式1：<br>$$<br>\begin{aligned} R &amp;=\frac{v}{\dot{\theta}} \ \frac{v \tan (\delta)}{L} &amp;=\frac{v}{R} \ \tan (\delta) &amp;=\frac{L}{R} \end{aligned}<br>$$</p>
 <p> 为了实现控制，从等式5，6，7中，写出此运动学模型是很有必要的，模型在两个随机输入下的形式：<br>$$<br>\left[\begin{array}{c}{\dot{x}} \ {\dot{y}} \ {\dot{\theta}} \ {\dot{\delta}}\end{array}\right]=\left[\begin{array}{c}{\cos (\theta)} \ {\sin (\theta)} \ {\left(\frac{\tan (\delta)}{L}\right)} \ {0}\end{array}\right] v+\left[\begin{array}{c}{0} \ {0} \ {0} \ {1}\end{array}\right] \delta<br>$$<br>其中$v$是车辆的纵向速度，$\dot{\delta}$是车辆转向轮的角速度。</p>
-<h5 id="3-1-1-路径坐标系"><a href="#3-1-1-路径坐标系" class="headerlink" title="3.1.1 路径坐标系"></a>3.1.1 路径坐标系</h5>
+<h5 id="3-1-1-路径坐标系"><a href="#3-1-1-路径坐标系" class="headerlink" title="3.1.1 路径坐标系"></a>3.1.1 路径坐标系</h5><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -899,10 +917,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.bmp" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.bmp" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1222,10 +1240,11 @@ import nump
     });
 </script>
 
+
         <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019 洪卫. 
+            Copyright&copy; 2019 涂志明. 
 
             <br>
             <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
@@ -1248,7 +1267,7 @@ import nump
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5.4k</span> 字
+                <span class="white-color">5.7k</span> 字
             
 
             
@@ -1319,7 +1338,7 @@ import nump
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
@@ -1419,6 +1438,24 @@ $(function () {
                     document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
                 }
             </script>
+        
+
+        <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+        
+            <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+  WIDGET = {FID: '1tFpFZ5Mtj'}
+</script>
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+  }
+  </script>
+
         
 
         <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->

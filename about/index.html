@@ -657,7 +657,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="/medias/avatars/hwsun.jpg" alt="涂志明"
+                                <img src="/medias/avatars/tuzhiming.jpg" alt="涂志明"
                                     class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
@@ -753,7 +753,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 </div>
 
                 <div class="introduction center-align" data-aos="fade-up">
-                    我是湖南大学机械与运载工程学院2016级本科生。研究方向是自动驾驶，智能决策规划与控制，欢迎大家报考！
+                    我是湖南大学机械与运载工程学院2016级本科生,现已经推免到国防科技大学的无人系统研究所，加入了车辆主动安全实验室，研究方向是智能车辆的决策规划与控制技术，欢迎大家与我交流！
                 </div>
 
                 <style type="text/css">
@@ -881,7 +881,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["Control","Python","Translation","Hexo","Github","博客","Numerical Analysis","Matlab"]
+                data: ["Control","Python","Hexo","Github","博客","Translation","Numerical Analysis","Matlab"]
             }
         ],
         yAxis: [
@@ -945,7 +945,25 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <li><b>地址</b><br>湖南大学，邮编410082</li>
 <li><b>QQ</b><br>1920549414</li>
 </ul>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
                         </div>
                 </div>
             </div>
@@ -956,7 +974,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019 洪卫. 
+            Copyright&copy; 2019 涂志明. 
 
             <br>
             <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
@@ -979,7 +997,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5.4k</span> 字
+                <span class="white-color">5.7k</span> 字
             
 
             
@@ -1050,7 +1068,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
@@ -1150,6 +1168,24 @@ $(function () {
                     document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
                 }
             </script>
+        
+
+        <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+        
+            <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+  WIDGET = {FID: '1tFpFZ5Mtj'}
+</script>
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+  }
+  </script>
+
         
 
         <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->

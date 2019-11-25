@@ -748,7 +748,7 @@ zip(xp">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        38
+                        90
                     </div>
                     
 
@@ -781,7 +781,25 @@ list<span class="token punctuation">(</span>zip<span class="token punctuation">(
 <p><img src="note.assets/image-20191120204632047.png" alt="image-20191120204632047"></p>
 <p><img src="note.assets/image-20191120204404657.png" alt="image-20191120204404657"></p>
 <p><img src="note.assets/image-20191120204448229.png" alt="image-20191120204448229"></p>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -893,10 +911,10 @@ list<span class="token punctuation">(</span>zip<span class="token punctuation">(
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.bmp" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.bmp" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1193,10 +1211,11 @@ import nump
 </main>
 
 
+
         <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            Copyright&copy; 2019 洪卫. 
+            Copyright&copy; 2019 涂志明. 
 
             <br>
             <span id="sitetime"></span><span class="my-face">ღゝ◡╹)ノ♡</span>
@@ -1219,7 +1238,7 @@ import nump
 
             
                 &nbsp; | &nbsp;字数统计:&nbsp;
-                <span class="white-color">5.4k</span> 字
+                <span class="white-color">5.7k</span> 字
             
 
             
@@ -1290,7 +1309,7 @@ import nump
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
         var diff = t2 - t1;
         var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffDays = Math.floor((diff / days) - diffYears * 365) - 90;
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
@@ -1390,6 +1409,24 @@ $(function () {
                     document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"><\/script>');
                 }
             </script>
+        
+
+        <!-- 天气接口控件  洪卫 shw2018 add 2019.09.09 -->
+        
+            <!-- 天气接口  洪卫 shw2018 add 2019.09.09 -->
+<script type="text/javascript">
+  WIDGET = {FID: '1tFpFZ5Mtj'}
+</script>
+<!-- <script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script> -->
+
+<script type="text/javascript">
+  //只在桌面版网页启用特效
+  var windowWidth = $(window).width();
+  if (windowWidth > 768) {
+      document.write('<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"><\/script>');
+  }
+  </script>
+
         
 
         <!-- 在线聊天工具  洪卫 shw2018 add 2019.09.11 -->
