@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>涂志明的博客</title>
+  
+  <subtitle>涂志明的博客</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://tuzhiming.github.io/"/>
+  <updated>2019-11-22T06:58:19.618Z</updated>
+  <id>https://tuzhiming.github.io/</id>
+  
+  <author>
+    <name>涂志明</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://tuzhiming.github.io/2019/11/23/shi-jian-ji-chu/"/>
+    <id>https://tuzhiming.github.io/2019/11/23/shi-jian-ji-chu/</id>
+    <published>2019-11-23T00:43:03.229Z</published>
+    <updated>2019-11-22T06:58:19.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;线控转向&quot;&gt;&lt;a href=&quot;#线控转向&quot; class=&quot;headerlink&quot; title=&quot;线控转向&quot;&gt;&lt;/a&gt;线控转向&lt;/h2&gt;&lt;h3 id=&quot;结构&quot;&gt;&lt;a href=&quot;#结构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Note</title>
+    <link href="https://tuzhiming.github.io/2019/11/23/note/"/>
+    <id>https://tuzhiming.github.io/2019/11/23/note/</id>
+    <published>2019-11-23T00:43:03.211Z</published>
+    <updated>2019-11-21T04:39:28.775Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Note&quot;&gt;&lt;a href=&quot;#Note&quot; class=&quot;headerlink&quot; title=&quot;Note&quot;&gt;&lt;/a&gt;Note&lt;/h1&gt;&lt;p&gt;各种语言的函数学习，代码学习&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>拉格朗日插值算法</title>
+    <link href="https://tuzhiming.github.io/2019/11/23/lagrange-interpolation/"/>
+    <id>https://tuzhiming.github.io/2019/11/23/lagrange-interpolation/</id>
+    <published>2019-11-23T00:43:03.178Z</published>
+    <updated>2019-11-21T04:39:28.785Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;拉格朗日插值算法&quot;&gt;&lt;a href=&quot;#拉格朗日插值算法&quot; class=&quot;headerlink&quot; title=&quot;拉格朗日插值算法&quot;&gt;&lt;/a&gt;拉格朗日插值算法&lt;/h2&gt;&lt;p&gt;源代码：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="Numerical Analysis" scheme="https://tuzhiming.github.io/categories/Numerical-Analysis/"/>
+    
+    
+      <category term="Python" scheme="https://tuzhiming.github.io/tags/Python/"/>
+    
+      <category term="Numerical Analysis" scheme="https://tuzhiming.github.io/tags/Numerical-Analysis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运用运动学模型实现路径跟踪</title>
+    <link href="https://tuzhiming.github.io/2019/11/20/3-yun-yong-yun-dong-xue-mo-xing-shi-xian-lu-jing-gen-zong.assets/"/>
+    <id>https://tuzhiming.github.io/2019/11/20/3-yun-yong-yun-dong-xue-mo-xing-shi-xian-lu-jing-gen-zong.assets/</id>
+    <published>2019-11-19T16:00:00.000Z</published>
+    <updated>2019-11-23T01:12:16.407Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;3-运用运动学模型实现路径跟踪&quot;&gt;&lt;a href=&quot;#3-运用运动学模型实现路径跟踪&quot; class=&quot;headerlink&quot; title=&quot;3 运用运动学模型实现路径跟踪&quot;&gt;&lt;/a&gt;3 运用运动学模型实现路径跟踪&lt;/h3&gt;&lt;p&gt;​       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Control" scheme="https://tuzhiming.github.io/tags/Control/"/>
+    
+      <category term="Translation" scheme="https://tuzhiming.github.io/tags/Translation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客开源</title>
+    <link href="https://tuzhiming.github.io/2019/08/27/blog-open-source/"/>
+    <id>https://tuzhiming.github.io/2019/08/27/blog-open-source/</id>
+    <published>2019-08-27T03:41:03.000Z</published>
+    <updated>2019-10-03T12:57:54.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;效果演示&quot;&gt;&lt;a href=&quot;#效果演示&quot; class=&quot;headerlink&quot; title=&quot;效果演示&quot;&gt;&lt;/a&gt;效果演示&lt;/h1&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://tuzhiming.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="https://tuzhiming.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://tuzhiming.github.io/tags/Github/"/>
+    
+      <category term="博客" scheme="https://tuzhiming.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pure_Pursuit</title>
+    <link href="https://tuzhiming.github.io/1970/01/01/xue-xi-zong-jie-tu-zhi-ming/"/>
+    <id>https://tuzhiming.github.io/1970/01/01/xue-xi-zong-jie-tu-zhi-ming/</id>
+    <published>1970-01-01T00:00:02.019Z</published>
+    <updated>2019-11-21T04:39:28.785Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;学习总结-11-10&quot;&gt;&lt;a href=&quot;#学习总结-11-10&quot; class=&quot;headerlink&quot; title=&quot;学习总结(11.10)&quot;&gt;&lt;/a&gt;学习总结(11.10)&lt;/h1&gt;&lt;p&gt;​                                  
+        
+      
+    
+    </summary>
+    
+      <category term="Control" scheme="https://tuzhiming.github.io/categories/Control/"/>
+    
+    
+      <category term="Python" scheme="https://tuzhiming.github.io/tags/Python/"/>
+    
+      <category term="Control" scheme="https://tuzhiming.github.io/tags/Control/"/>
+    
+      <category term="Matlab" scheme="https://tuzhiming.github.io/tags/Matlab/"/>
+    
+  </entry>
+  
+</feed>
