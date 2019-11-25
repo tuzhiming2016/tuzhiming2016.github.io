@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>涂志明の博客</title>
   
-  <subtitle>A Student of Vehicle Engineer</subtitle>
+  <subtitle>涂志明の博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tuzhiming.github.io/"/>
@@ -138,9 +138,9 @@
       <category term="Control" scheme="https://tuzhiming.github.io/categories/Control/"/>
     
     
-      <category term="Control" scheme="https://tuzhiming.github.io/tags/Control/"/>
-    
       <category term="Python" scheme="https://tuzhiming.github.io/tags/Python/"/>
+    
+      <category term="Control" scheme="https://tuzhiming.github.io/tags/Control/"/>
     
       <category term="Matlab" scheme="https://tuzhiming.github.io/tags/Matlab/"/>
     
