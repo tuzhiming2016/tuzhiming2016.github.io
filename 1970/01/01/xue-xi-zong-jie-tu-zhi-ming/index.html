@@ -791,11 +791,11 @@
             <div id="articleContent">
                 <h1 id="学习总结-11-10"><a href="#学习总结-11-10" class="headerlink" title="学习总结(11.10)"></a>学习总结(11.10)</h1><p>​                                                                                                        <strong>车辆主动安全实验室    涂志明</strong>    </p>
 <p>一.用matlab实现Pure_Pursuit算法，基于车辆几何模型（如图）</p>
-<img src="学习总结—涂志明/车辆几何模型.png" alt="image-20191110222456755" style="zoom: 50%;">
+<img src="/.io//车辆几何模型.png" alt="image-20191110222456755" style="zoom: 50%;">
 
 
 
-<img src="学习总结—涂志明/车辆纯追踪算法.png" alt="image-20191110222527578" style="zoom: 50%;">
+<img src="/.io//车辆纯追踪算法.png" alt="image-20191110222527578" style="zoom: 50%;">
 
 
 
@@ -890,10 +890,10 @@ figure
     <span class="token comment" spellcheck="true">%ind = ind + 10;                       %第二种方法在最小距离路点的基础上，向前预瞄到第ind+10</span>
 <span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p> 运行结果如图（k=0.05)：</p>
-<img src="学习总结—涂志明（11.10）.assets/k=0.05.png" alt="image-20191110222129427" style="zoom: 67%;">
+<img src="/.io//k=0.05.png" alt="image-20191110222129427" style="zoom: 67%;">
 
 <p>运行结果如图（k=0.5):</p>
-<img src="学习总结—涂志明（11.10）.assets/k=0.5.png" alt="image-20191110224859841" style="zoom:67%;">
+<img src="/.io//k=0.5.png" alt="image-20191110224859841" style="zoom:67%;">
 
 <p>​        因此纯追踪控制器的前视距离调整应注意，很短的前视距离(k小)会造成车辆控制的不稳定甚至震荡，为了确保车辆稳定而设置较长的前视距离(k大)又会出现车辆在大转角处转向不足的问题。</p>
 <p>二.用Python实现Pure_Pursuit算法：</p>
@@ -1006,7 +1006,7 @@ L <span class="token operator">=</span> <span class="token number">2.9</span>   
 <span class="token comment" spellcheck="true"># plt.cla()清除轴，当前活动轴在当前图中。 它保持其他轴不变。</span>
 <span class="token comment" spellcheck="true"># plt.clf()清除整个当前数字。与所有的轴，但离开窗口打开，这样它就可以再用在其他的 plots上了。</span>
 <span class="token comment" spellcheck="true"># plt.close()关上窗户，如果未另指定，则该窗口将是当前窗口。</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<img src="学习总结—涂志明（11.10）.assets/python.png" alt="image-20191110225822486" style="zoom:50%;">
+<img src="/.io//python.png" alt="image-20191110225822486" style="zoom:50%;">
 
 <p>三.接下来任务规划:</p>
 <p>继续完成Stanley控制算法实现，掌握MPC基本理论，11月内能够独立写出MPC的控制算法实现。</p>
