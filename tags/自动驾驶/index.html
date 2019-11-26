@@ -6,10 +6,10 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="运用运动学模型实现路径跟踪, Automation 自动驾驶  智能决策 智能控制 人工智能">
+    <meta name="keywords" content="标签: 自动驾驶, Automation 自动驾驶  智能决策 智能控制 人工智能">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="3 运用运动学模型实现路径跟踪​        将车辆系统模型简化为运动学自行车模型是一种常用的近似方法，常用于机器人的运动规划、简单的车辆分析和（还有几何模型方法）得出直观的控制规律。本章给出了该模型的运动学方程。此外，本文还应用了针对于">
+    <meta name="description" content="标签: 自动驾驶 | 涂志明の博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>运用运动学模型实现路径跟踪 | 涂志明の博客</title>
+    <title>标签: 自动驾驶 | 涂志明の博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -584,638 +584,161 @@
 
 </header>
 
-        
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
-<script>
-    (function() {
-        let pwd = '';
-        if (pwd && pwd.length > 0) {
-            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
-                alert('密码错误，将返回主页！');
-                location.href = '/';
-            }
-        }
-    })();
-</script>
-
-
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+        <div class="bg-cover pd-header about-cover">
     <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <div class="description center-align post-title">
-                        运用运动学模型实现路径跟踪
-                    </div>
-                </div>
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                <!-- 
+                    涂志明の博客
+                 -->
+                
+                    标签
+                
             </div>
+
+            <div class="description center-align">
+                
+                    <!-- 湖南大学 | 车辆工程 | 自动驾驶 -->
+                    <span id="jinrishici-sentence">正在加载今日诗词...</span>
+                
+            </div>
+            
+            
         </div>
     </div>
 </div>
+<script>
+// 每天切换 banner 图.  Switch banner image every day.
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+</script>
 
 
+    </div>
+</div>
 
-<main class="post-container content">
+<main class="content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
-<style>
-    #articleContent h1::before,
-    #articleContent h2::before,
-    #articleContent h3::before,
-    #articleContent h4::before,
-    #articleContent h5::before,
-    #articleContent h6::before {
-        display: block;
-        content: " ";
-        height: 100px;
-        margin-top: -100px;
-        visibility: hidden;
-    }
 
-    #articleContent :focus {
-        outline: none;
-    }
-
-    .toc-fixed {
-        position: fixed;
-        top: 64px;
-    }
-
-    .toc-widget {
-        padding-left: 20px;
-    }
-
-    .toc-widget .toc-title {
-        margin: 35px 0 15px 0;
-        padding-left: 17px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    .toc-widget ol {
-        padding: 0;
-        list-style: none;
-    }
-
-    #toc-content ol {
-        padding-left: 10px;
-    }
-
-    #toc-content ol li {
-        padding-left: 10px;
-    }
-
-    #toc-content .toc-link:hover {
-        color: #42b983;
-        font-weight: 700;
-        text-decoration: underline;
-    }
-
-    #toc-content .toc-link::before {
-        background-color: transparent;
-        max-height: 25px;
-    }
-
-    #toc-content .is-active-link {
-        color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
-    }
-
-    #floating-toc-btn {
-        position: fixed;
-        right: 20px;
-        bottom: 76px;
-        padding-top: 15px;
-        margin-bottom: 0;
-        z-index: 998;
-    }
-
-    #floating-toc-btn .btn-floating {
-        width: 48px;
-        height: 48px;
-    }
-
-    #floating-toc-btn .btn-floating i {
-        line-height: 48px;
-        font-size: 1.4rem;
-    }
-</style>
-<div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- shw2018 洪卫  modify 2019.08.15-->
-<!-- 文章内容详情 -->
-<div id="artDetail">
+<div id="tags" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Control/" target="_blank">
-                                <span class="chip bg-color">Control</span>
-                            </a>
-                        
-                            <a href="/tags/Translation/" target="_blank">
-                                <span class="chip bg-color">Translation</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-tags"></i>&nbsp;&nbsp;文章标签
             </div>
-            
-            <div class="post-info">
-                <div class="post-date info-break-policy">
-                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-20
-                </div>
-
-                <div class="post-author info-break-policy">
-                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
-                    
-                        涂志明
-                    
-                </div>
-
-                
-                    
-                    <div class="info-break-policy">
-                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
-                    </div>
-                    
-
-                    
-                    <div class="info-break-policy">
-                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        4 分
-                    </div>
-                    
+            <div class="tag-chips">
                 
                 
-                
-                        <span id="busuanzi_container_site_pv" style='display:none'></span>
-                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv" ></span>
-    
-                
-
-            </div>
-        </div>
-        <hr class="clearfix">
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h3 id="3-运用运动学模型实现路径跟踪"><a href="#3-运用运动学模型实现路径跟踪" class="headerlink" title="3 运用运动学模型实现路径跟踪"></a>3 运用运动学模型实现路径跟踪</h3><p>​        将车辆系统模型简化为运动学自行车模型是一种常用的近似方法，常用于机器人的运动规划、简单的车辆分析和（还有几何模型方法）得出直观的控制规律。本章给出了该模型的运动学方程。此外，本文还应用了针对于约束系统的控制理论的一个重要方法来重新建立运动方程，并给出了路径跟踪问题的解决方案。该方法的应用使得我们能够使用著名的控制理论工具来设计控制器并进行稳定性分析。</p>
-<h4 id="3-1-运动学自行车模型"><a href="#3-1-运动学自行车模型" class="headerlink" title="3.1 运动学自行车模型"></a>3.1 运动学自行车模型</h4><img src="3 运用运动学模型实现路径跟踪.assets/image-20191120085740718.png" alt="image-20191120085740718" style="zoom:50%;">
-
-<p>​                                                                     图18：运动学自行车模型</p>
-<p>​        汽车的运动学自行车模型的运动方程在文献[5,11,6,4]中很容易得到。为了使论文完整起见，这里包含了模型的推到证明。运动学自行车模型将左右车轮简化成一对位于前后轴中心的单轮，如图18所示。假定车轮没有横向滑移，只有前轮是转向轮。并且限制这个模型只能在二维平面上运动，前轮和后轮的非完整约束方程是：<br>$$<br>\dot{x}<em>{f} \sin (\theta+\delta)-\dot{y}</em>{f} \cos (\theta+\delta)=0<br>$$</p>
-<p>$$<br>\dot{x} \sin (\theta)-\dot{y} \cos (\theta)=0<br>$$</p>
-<p>其中$(x,y)$是后轮在全局坐标（笛卡尔坐标系）,(xf,yf)是前轮的全局坐标,$θ$是车辆在全局坐标系下的航向角,$δ$是车身坐标系下的转向角。由于前轮与后轮在车辆航向方向上距离为$L$，(xf,yf)可表示为:<br>$$<br>\begin{array}{l}{x_{f}=x+L \cos (\theta)} \ {y_{f}=y+L \sin (\theta)}\end{array}<br>$$<br>在等式(1)中除去：<br>$$<br>\begin{align}<br>\begin{aligned} 0=&amp; \frac{d(x+L \cos (\theta))}{d t} \sin (\theta+\delta)-\frac{d(y+L \sin (\theta))}{d t} \cos (\theta+\delta)<br>\<br>=&amp;(\dot{x}-\dot{\theta} L \sin (\theta)) \sin (\theta+\delta)-(\dot{y}+\dot{\theta} L \cos (\theta)) \cos (\theta+\delta)<br>\<br>=&amp; \dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)<br>\<br>&amp;-\dot{\theta} L \sin (\theta)(\sin (\theta) \cos (\delta)+\cos (\theta) \sin (\delta)) \<br>&amp;-\dot{\theta} L \cos (\theta)(\cos (\theta) \cos (\delta)-\sin (\theta) \sin (\delta))<br>\<br>=&amp; \dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)<br>\<br>&amp;\begin{array}{l}{-\dot{\theta} L \sin ^{2}(\theta) \cos (\delta)-\dot{\theta} L \cos ^{2}(\theta) \cos (\delta)} \ {-\dot{\theta} L \sin (\theta) \cos (\theta) \sin (\delta)+\dot{\theta} L \cos (\theta) \sin (\theta) \sin (\delta)}\end{array}<br>\<br>=&amp;\dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)-\dot{\theta} L\left(\sin ^{2}(\theta)+\cos ^{2}(\theta)\right) \cos (\delta)<br>\<br>=&amp; \dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)-\dot{\theta} L \cos (\delta) \end{aligned}<br>\end{align}<br>$$<br>后轮上的非完整约束，根据公式(2)，$\dot{x}$=${cos(\theta)}$(和$\dot{y}$=${sin(\theta)}$，<code>其中标量的任意倍数</code>。这个标量对应纵向速度$v$，这样<br>$$<br>\dot{x}=v \cos (\theta)<br>$$</p>
-<p>$$<br>\dot{y}=v \sin (\theta)<br>$$</p>
-<p>应用这个公式在前轮的约束中，根据等式1计算出$\dot{\theta}$<br>$$<br>\begin{aligned}  \dot{\theta}&amp;=\frac{\dot{x} \sin (\theta+\delta)-\dot{y} \cos (\theta+\delta)}{L \cos (\delta)} \ &amp;=\frac{v \cos (\theta)(\sin (\theta) \cos (\delta)+\cos (\theta) \sin (\delta))}{L \cos (\delta)} \end{aligned}</p>
-<p>\<br>\begin{aligned} &amp;-\frac{v \sin (\theta)(\cos (\theta) \cos (\delta)-\sin (\theta) \sin (\delta))}{L \cos (\delta)} \=&amp; \frac{v\left(\cos ^{2}(\theta)+\sin ^{2}(\theta)\right) \sin (\delta)}{L \cos (\delta)} \=&amp; \frac{v \tan (\delta)}{L} \end{aligned}<br>$$<br> 车辆的瞬时曲率半径$R$决定从$v$和$\dot{\theta}$推导出的$\theta$前面介绍的等式1：<br>$$<br>\begin{aligned} R &amp;=\frac{v}{\dot{\theta}} \ \frac{v \tan (\delta)}{L} &amp;=\frac{v}{R} \ \tan (\delta) &amp;=\frac{L}{R} \end{aligned}<br>$$</p>
-<p> 为了实现控制，从等式5，6，7中，写出此运动学模型是很有必要的，模型在两个随机输入下的形式：<br>$$<br>\left[\begin{array}{c}{\dot{x}} \ {\dot{y}} \ {\dot{\theta}} \ {\dot{\delta}}\end{array}\right]=\left[\begin{array}{c}{\cos (\theta)} \ {\sin (\theta)} \ {\left(\frac{\tan (\delta)}{L}\right)} \ {0}\end{array}\right] v+\left[\begin{array}{c}{0} \ {0} \ {0} \ {1}\end{array}\right] \delta<br>$$<br>其中$v$是车辆的纵向速度，$\dot{\delta}$是车辆转向轮的角速度。</p>
-<h5 id="3-1-1-路径坐标系"><a href="#3-1-1-路径坐标系" class="headerlink" title="3.1.1 路径坐标系"></a>3.1.1 路径坐标系</h5><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
-            </div>
-            <hr/>
-
-            
-            <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.88rem;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fa fa-close"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力!</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-            
-
-            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
-<div id="article-share">
-    
-    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
-    
-</div>
-
-<script src="/libs/share/js/social-share.min.js"></script>
-
-            
-            
-            
-            <div class="reprint1">
-                <p>
-                    <span class="reprint1-tip">
-                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                <a href="/tags/Control/" title="Control: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Control" style="background-color: #F9EBEA;">Control
+                        <span class="tag-length">2</span>
                     </span>
-                    <a href="https://tuzhiming.github.io" class="b-link-green">涂志明の博客</a>
-                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/11/20/3-yun-yong-yun-dong-xue-mo-xing-shi-xian-lu-jing-gen-zong.assets/" class="b-link-green">运用运动学模型实现路径跟踪</a>
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2019/11/23/note/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Note">
-                        
-                        <span class="card-title">Note</span>
-                    </div>
                 </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            仅仅是做点笔记
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
-                        </span>
-                        <span class="publish-author">
-                            
-                        </span>
-                    </div>
-                </div>
+                
+                
+                <a href="/tags/Translation/" title="Translation: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Translation" style="background-color: #F5EEF8;">Translation
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Python/" title="Python: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Python" style="background-color: #D5F5E3;">Python
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Numerical-Analysis/" title="Numerical Analysis: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Numerical Analysis" style="background-color: #E8F8F5;">Numerical Analysis
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Matlab/" title="Matlab: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Matlab" style="background-color: #FEF9E7;">Matlab
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Vehicle/" title="Vehicle: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Vehicle" style="background-color: #F8F9F9;">Vehicle
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/自动驾驶/" title="自动驾驶: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="自动驾驶" style="background-color: #82E0AA;">自动驾驶
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/线控底盘/" title="线控底盘: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="线控底盘" style="background-color: #D7BDE2;">线控底盘
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
             </div>
         </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/11/18/lagrange-interpolation/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="拉格朗日插值算法">
-                        
-                        <span class="card-title">拉格朗日插值算法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            拉格朗日插值算法源代码：
-'''
-Lagrange Interpolation
-Implement Lagrange interpolation using Python
-Author:Tu ZhiMing
-'''
+    </div>
+</div>
 
-import nump
-                        
-                    </div>
-                    <div class="publish-info">
+    
+
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            
+            <div class="article tag-post col s12 m6 l4" data-tags="Vehicle, 自动驾驶, 线控底盘" data-aos="fade-up">
+                <div class="card">
+                    <a href="/2019/11/15/shi-jian-ji-chu/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/banner/7.jpg" class="responsive-img" alt="线控转向基础知识">
+                            
+                            <span class="card-title">线控转向基础知识</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Numerical-Analysis/" class="post-category" target="_blank">
-                                    Numerical Analysis
-                                </a>
-                            
-                            
-                        </span>
+                            <span class="publish-author">
+                                
+                            </span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                    <a href="/tags/Numerical-Analysis/" target="_blank">
-                        <span class="chip bg-color">Numerical Analysis</span>
-                    </a>
-                    
-                </div>
-                
             </div>
+            
         </div>
-        
-    </div>
-</article>
-</div>
-
-
-<script>
-    $('#articleContent').on('copy', function (e) {
-        // IE8 or earlier browser is 'undefined'
-        if (typeof window.getSelection === 'undefined') return;
-
-        var selection = window.getSelection();
-        // if the selection is short let's not annoy our users.
-        if (('' + selection).length < Number.parseInt('120')) {
-            return;
-        }
-
-        // create a div outside of the visible area and fill it with the selected text.
-        var bodyElement = document.getElementsByTagName('body')[0];
-        var newdiv = document.createElement('div');
-        newdiv.style.position = 'absolute';
-        newdiv.style.left = '-99999px';
-        bodyElement.appendChild(newdiv);
-        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
-
-        // we need a <pre> tag workaround.
-        // otherwise the text inside "pre" loses all the line breaks!
-        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
-            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
-        }
-
-        var url = document.location.href;
-        newdiv.innerHTML += '<br />'
-            + '来源: 涂志明の博客<br />'
-            + '作者: 涂志明<br />'
-            + '链接: <a href="' + url + '">' + url + '</a><br />'
-            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
-
-        selection.selectAllChildren(newdiv);
-        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
-    });
-</script>
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget">
-            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fa fa-list"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
-            headingSelector: 'h1, h2, h3, h4, h5'
-        });
-
-        // modify the toc link href to support Chinese.
-        let i = 0;
-        let tocHeading = 'toc-heading-';
-        $('#toc-content a').each(function () {
-            $(this).attr('href', '#' + tocHeading + (++i));
-        });
-
-        // modify the heading title id to support Chinese.
-        i = 0;
-        $('#articleContent').children('h1, h2, h3, h4, h5').each(function () {
-            $(this).attr('id', tocHeading + (++i));
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).slideUp(500);
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).slideDown(500);
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-    
-
+    </article>
 </main>
-
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
         <footer class="page-footer bg-color">

@@ -6,17 +6,14 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="拉格朗日插值算法, Automation 自动驾驶  智能决策 智能控制 人工智能">
+    <meta name="keywords" content="线控转向基础知识, Automation 自动驾驶  智能决策 智能控制 人工智能">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="拉格朗日插值算法源代码：
-&#39;&#39;&#39;
-Lagrange Interpolation
-Implement Lagrange interpolation using Python
-Author:Tu ZhiMing
-&#39;&#39;&#39;
+    <meta name="description" content="线控转向结构 线控转向系统由方向盘总成、电控单元和转向执行机构这三大部分组成 。
 
-import nump">
+
+
+[IMG]https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +21,7 @@ import nump">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>拉格朗日插值算法 | 涂志明の博客</title>
+    <title>线控转向基础知识 | 涂志明の博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -595,7 +592,7 @@ import nump">
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'false';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -608,13 +605,13 @@ import nump">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        拉格朗日插值算法
+                        线控转向基础知识
                     </div>
                 </div>
             </div>
@@ -726,12 +723,16 @@ import nump">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/Vehicle/" target="_blank">
+                                <span class="chip bg-color">Vehicle</span>
                             </a>
                         
-                            <a href="/tags/Numerical-Analysis/" target="_blank">
-                                <span class="chip bg-color">Numerical Analysis</span>
+                            <a href="/tags/自动驾驶/" target="_blank">
+                                <span class="chip bg-color">自动驾驶</span>
+                            </a>
+                        
+                            <a href="/tags/线控底盘/" target="_blank">
+                                <span class="chip bg-color">线控底盘</span>
                             </a>
                         
                     </div>
@@ -739,22 +740,13 @@ import nump">
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Numerical-Analysis/" class="post-category" target="_blank">
-                                Numerical Analysis
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
             
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-23
+                    2019-11-15
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -768,14 +760,14 @@ import nump">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        360
+                        1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -792,85 +784,42 @@ import nump">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="拉格朗日插值算法"><a href="#拉格朗日插值算法" class="headerlink" title="拉格朗日插值算法"></a>拉格朗日插值算法</h2><p>源代码：</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
-Lagrange Interpolation
-Implement Lagrange interpolation using Python
-Author:Tu ZhiMing
-'''</span>
+                <h2 id="线控转向"><a href="#线控转向" class="headerlink" title="线控转向"></a>线控转向</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p> 线控转向系统由方向盘总成、电控单元和转向执行机构这三大部分组成 。</p>
+<p><img src="https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/%E7%BA%BF%E6%8E%A7%E8%BD%AC%E5%90%91%E7%BB%93%E6%9E%84.png" alt=""></p>
+<img src="https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控转向结构.png">
 
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-
-<span class="token keyword">class</span> <span class="token class-name">Lagrange</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">'''
-    Lagrange Interpolation Class
-    '''</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x <span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
-
-        self<span class="token punctuation">.</span>x <span class="token operator">=</span> x
-        self<span class="token punctuation">.</span>y <span class="token operator">=</span> y
-
-        self<span class="token punctuation">.</span>nx <span class="token operator">=</span> len<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>yk <span class="token operator">=</span> y
-        self<span class="token punctuation">.</span>lk_den <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span>
-
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> i<span class="token operator">==</span>j<span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                self<span class="token punctuation">.</span>lk_den<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*=</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-
-    <span class="token keyword">def</span> <span class="token function">calc</span><span class="token punctuation">(</span>self <span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> x <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> None
-        <span class="token keyword">elif</span> x <span class="token operator">></span> self<span class="token punctuation">.</span>x<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> None
-
-        lk_num <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span>
-        y <span class="token operator">=</span> <span class="token number">0.0</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> i<span class="token operator">==</span>j<span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                lk_num<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*=</span> x <span class="token operator">-</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-            y <span class="token operator">+=</span> self<span class="token punctuation">.</span>yk<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> lk_num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">/</span>self<span class="token punctuation">.</span>lk_den<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-        <span class="token keyword">return</span> y
-
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true"># example #1: x**2</span>
-    xp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
-    yp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">9.0</span><span class="token punctuation">]</span>
-    x <span class="token operator">=</span> <span class="token number">1.5</span>
-    Lagrange1 <span class="token operator">=</span> Lagrange<span class="token punctuation">(</span>xp<span class="token punctuation">,</span>yp<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nExample #1: "</span><span class="token punctuation">)</span>
-    zipped_x_y <span class="token operator">=</span> list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given points: "</span><span class="token punctuation">,</span> zipped_x_y<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"interpolated y value = %.3f at x = %.3f"</span><span class="token operator">%</span> <span class="token punctuation">(</span>Lagrange1<span class="token punctuation">.</span>calc<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">#example #2: x**3</span>
-    xp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
-    yp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">8.0</span><span class="token punctuation">,</span> <span class="token number">27.0</span><span class="token punctuation">]</span>
-    x <span class="token operator">=</span> <span class="token number">2.5</span>
-    Lagrange2 <span class="token operator">=</span> Lagrange<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nExample #2: "</span><span class="token punctuation">)</span>
-    zipped_x_y <span class="token operator">=</span> list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given points: "</span><span class="token punctuation">,</span> zipped_x_y<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"interpolated y value = %.3f at x = %.3f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>Lagrange2<span class="token punctuation">.</span>calc<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>运行结果：</p>
-<pre class="line-numbers language-python"><code class="language-python">Example <span class="token comment" spellcheck="true">#1: </span>
-Given points<span class="token punctuation">:</span>  <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">9.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-interpolated y value <span class="token operator">=</span> <span class="token number">2.250</span> at x <span class="token operator">=</span> <span class="token number">1.500</span>
-
-Example <span class="token comment" spellcheck="true">#2: </span>
-Given points<span class="token punctuation">:</span>  <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">8.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">27.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-interpolated y value <span class="token operator">=</span> <span class="token number">16.000</span> at x <span class="token operator">=</span> <span class="token number">2.500</span>
-
-Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>[IMG]<a href="https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控转向结构.png[/IMG]" target="_blank" rel="noopener">https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控转向结构.png[/IMG]</a></p>
+<p><a href="https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控转向结构.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/线控转向结构.png</a></p>
+<p>线控转向系统结构如上图，主要分为三个部分：</p>
+<p>方向盘总成：包括转向盘、转矩传感器、转向角传感器、转矩反馈电动机和机械传动装置；</p>
+<p>电控单元：包括车速传感器，可增加横摆角速度传感器、加速度传感器和电子控制单元以提高车辆的操纵稳定性；</p>
+<p>转向系统：包括角位移传感器、转向电动机、齿轮齿条转向机构和其他机械转向装置等。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>​        当转向盘转动时，转矩传感器和转向角传感器将测量到的驾驶员转矩和转向盘的转角转变成电信号输入到电子控制器（ECU），ECU依据车速传感器和安装在转向传动机构上的位移传感器的信号来控制转矩反馈电动机的旋转方向，并根据转向力模拟、生成反馈转矩，控制转向电动机的旋转方向、转矩大小和旋转的角度，通过机械转向装置控制转向轮的转向位置。 </p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>省去了转向柱机械结构，转向系统的结构得到简化，节约了驾驶舱的空间，减轻转向系统的重量，提高汽车的燃油经济性。</li>
+<li>驾驶员将不再感受到路面颠簸所带来的方向盘振动，汽车发生正面碰撞事故时驾驶员也不会受到转向柱的伤害，节省出来的空间可以布置腿部安全气囊，极大地提高汽车的安全性能。</li>
+<li>因路面颠簸不平而产生的冲击则不会传递到驾驶员的手上，较少驾驶员体力消耗，出入空间增加，提升了驾驶舒适性。 </li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>需要较高功率的力反馈电机和转向执行电机； </li>
+<li>复杂的力反馈电机和转向执行电机的算法实现； </li>
+<li>冗余设备导致额外增加成本和重量。</li>
+</ol>
+<h3 id="布置形式"><a href="#布置形式" class="headerlink" title="布置形式"></a>布置形式</h3><p>转向电机的数量、布置位置与控制方式不同</p>
+<p><img src="https://raw.githubusercontent.com/tuzhiming2016/MyBlogFigure/img/img/%E7%BA%BF%E6%8E%A7%E8%BD%AC%E5%90%91%E7%BB%93%E6%9E%84.png" alt=""></p>
+<h3 id="冗余设计"><a href="#冗余设计" class="headerlink" title="冗余设计"></a>冗余设计</h3><p> SBW线控转向系统有两种“冗余”设计方式</p>
+<ol>
+<li><p>通过传统的转向管柱将方向盘与转向执行机构连接在一起，基本形态与普通燃油车无异，但在转向管柱与转向执行机构之间有电控多片离合器相连。</p>
+<p>​                                         <img src="https://img1.gtimg.com/auto/pics/hv1/60/189/2307/150060930.jpg" alt="自动驾驶的核心？浅谈线控转向技术" style="zoom:50%;"> </p>
+</li>
+<li><p>在执行机构处（转向机构）采用多个电机控制来实现冗余度，在方向盘处通过多个传感器布置来实现输入信号的冗余度， 这种冗余方式更先进，但成本非常高，这相当于需要制造两套重复的转向机构，但是这种设计可以完全取消掉转向管柱。</p>
+</li>
+</ol>
+<h3 id="设计线控转向应考虑的问题"><a href="#设计线控转向应考虑的问题" class="headerlink" title="设计线控转向应考虑的问题"></a>设计线控转向应考虑的问题</h3><p>1.可靠性问题，冗余设计</p>
+<p>2.路感控制，反馈力矩估计，路感电机控制</p>
+<p>3.布置形式，空间布置</p>
+<p>4.抗干扰控制</p>
+<h2 id="平台框架"><a href="#平台框架" class="headerlink" title="平台框架"></a>平台框架</h2><p> 实时操作系统（RTOS）是指当外界事件或数据产生时，能够接受并以足够快的速度予以处理，其处理的结果又能在规定的时间之内来控制生产过程或对处理系统做出快速响应，调度一切可利用的资源完成实时任务，并控制所有实时任务协调一致运行的操作系统。提供及时响应和高可靠性是其主要特点。 </p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1039,7 +988,7 @@ Process finished <span class="token keyword">with</span> exit code <span class="
                     </span>
                     <a href="https://tuzhiming.github.io" class="b-link-green">涂志明の博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/11/23/lagrange-interpolation/" class="b-link-green">拉格朗日插值算法</a>
+                    <a href="/2019/11/15/shi-jian-ji-chu/" class="b-link-green">线控转向基础知识</a>
                 </p>
             </div>
 
@@ -1065,33 +1014,55 @@ Process finished <span class="token keyword">with</span> exit code <span class="
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/23/note/">
+                <a href="/2019/11/18/lagrange-interpolation/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Note">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="拉格朗日插值算法">
                         
-                        <span class="card-title">Note</span>
+                        <span class="card-title">拉格朗日插值算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Note各种语言的函数学习，代码学习
-for i in range(100)  #i从0到99
-range: range([start,] stop[, step])
-xrange([start,] stop[, step])
-zip(xp
+                            拉格朗日插值算法源代码：
+'''
+Lagrange Interpolation
+Implement Lagrange interpolation using Python
+Author:Tu ZhiMing
+'''
+
+import nump
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-23
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-18
                         </span>
                         <span class="publish-author">
                             
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Numerical-Analysis/" class="post-category" target="_blank">
+                                    Numerical Analysis
+                                </a>
+                            
+                            
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Numerical-Analysis/" target="_blank">
+                        <span class="chip bg-color">Numerical Analysis</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1103,26 +1074,33 @@ zip(xp
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/20/3-yun-yong-yun-dong-xue-mo-xing-shi-xian-lu-jing-gen-zong.assets/">
+                <a href="/1970/01/01/xue-xi-zong-jie-tu-zhi-ming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="运用运动学模型实现路径跟踪">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="Pure_Pursuit">
                         
-                        <span class="card-title">运用运动学模型实现路径跟踪</span>
+                        <span class="card-title">Pure_Pursuit</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            3 运用运动学模型实现路径跟踪​        将车辆系统模型简化为运动学自行车模型是一种常用的近似方法，常用于机器人的运动规划、简单的车辆分析和（还有几何模型方法）得出直观的控制规律。本章给出了该模型的运动学方程。此外，本文还应用了针对于
+                            学习总结(11.10)​                                                                                                        车辆主动
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>1970-01-01
                             </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Control/" class="post-category" target="_blank">
+                                    Control
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1134,8 +1112,12 @@ zip(xp
                         <span class="chip bg-color">Control</span>
                     </a>
                     
-                    <a href="/tags/Translation/" target="_blank">
-                        <span class="chip bg-color">Translation</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/Matlab/" target="_blank">
+                        <span class="chip bg-color">Matlab</span>
                     </a>
                     
                 </div>
@@ -1283,6 +1265,13 @@ zip(xp
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
         <footer class="page-footer bg-color">
