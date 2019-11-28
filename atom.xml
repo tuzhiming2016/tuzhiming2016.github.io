@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://tuzhiming.github.io/"/>
-  <updated>2019-11-26T03:28:36.497Z</updated>
+  <updated>2019-11-27T07:05:12.726Z</updated>
   <id>https://tuzhiming.github.io/</id>
   
   <author>
@@ -15,6 +15,97 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MPC</title>
+    <link href="https://tuzhiming.github.io/2019/11/26/mpc/"/>
+    <id>https://tuzhiming.github.io/2019/11/26/mpc/</id>
+    <published>2019-11-26T07:20:31.000Z</published>
+    <updated>2019-11-27T07:05:12.726Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>埃尔米特插值</title>
+    <link href="https://tuzhiming.github.io/2019/11/26/ai-er-mi-te-cha-zhi/"/>
+    <id>https://tuzhiming.github.io/2019/11/26/ai-er-mi-te-cha-zhi/</id>
+    <published>2019-11-26T07:20:31.000Z</published>
+    <updated>2019-11-26T07:20:31.142Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://tuzhiming.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="https://tuzhiming.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://tuzhiming.github.io/tags/Github/"/>
+    
+      <category term="博客" scheme="https://tuzhiming.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Newton Interpolation</title>
+    <link href="https://tuzhiming.github.io/2019/11/26/niu-dun-cha-zhi/"/>
+    <id>https://tuzhiming.github.io/2019/11/26/niu-dun-cha-zhi/</id>
+    <published>2019-11-26T07:12:36.000Z</published>
+    <updated>2019-11-26T07:57:53.635Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;牛顿插值算法&quot;&gt;&lt;a href=&quot;#牛顿插值算法&quot; class=&quot;headerlink&quot; title=&quot;牛顿插值算法&quot;&gt;&lt;/a&gt;牛顿插值算法&lt;/h2&gt;&lt;p&gt;源代码：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="软件安装与配置" scheme="https://tuzhiming.github.io/categories/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Hexo" scheme="https://tuzhiming.github.io/tags/Hexo/"/>
+    
+      <category term="Github" scheme="https://tuzhiming.github.io/tags/Github/"/>
+    
+      <category term="博客" scheme="https://tuzhiming.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>Note</title>
@@ -144,9 +235,9 @@
       <category term="Control" scheme="https://tuzhiming.github.io/categories/Control/"/>
     
     
-      <category term="Python" scheme="https://tuzhiming.github.io/tags/Python/"/>
-    
       <category term="Control" scheme="https://tuzhiming.github.io/tags/Control/"/>
+    
+      <category term="Python" scheme="https://tuzhiming.github.io/tags/Python/"/>
     
       <category term="Matlab" scheme="https://tuzhiming.github.io/tags/Matlab/"/>
     

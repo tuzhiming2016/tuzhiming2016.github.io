@@ -6,17 +6,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Lagrange Interpolation, Automation 自动驾驶  智能决策 智能控制 人工智能">
+    <meta name="keywords" content="MPC, Automation 自动驾驶  智能决策 智能控制 人工智能">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="KeoTn_OFy4ndJwXNmm2gMeQfPhd7alqE9vQDwI32KCY">
-    <meta name="description" content="拉格朗日插值算法源代码：
-&#39;&#39;&#39;
-Lagrange Interpolation
-Implement Lagrange interpolation using Python
-Author:Tu ZhiMing
-&#39;&#39;&#39;
-
-import nump">
+    <meta name="description" content="
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -24,7 +20,7 @@ import nump">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Lagrange Interpolation | 涂志明の博客</title>
+    <title>MPC | 涂志明の博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -595,7 +591,7 @@ import nump">
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '';
+        let pwd = 'false';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -608,13 +604,13 @@ import nump">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/banner/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Lagrange Interpolation
+                        MPC
                     </div>
                 </div>
             </div>
@@ -724,29 +720,12 @@ import nump">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Python/" target="_blank">
-                                <span class="chip bg-color">Python</span>
-                            </a>
-                        
-                            <a href="/tags/Numerical-Analysis/" target="_blank">
-                                <span class="chip bg-color">Numerical Analysis</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Numerical-Analysis/" class="post-category" target="_blank">
-                                Numerical Analysis
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -754,7 +733,7 @@ import nump">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-18
+                    2019-11-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -768,14 +747,14 @@ import nump">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        360
+                        52
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        1 分
                     </div>
                     
                 
@@ -792,86 +771,7 @@ import nump">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="拉格朗日插值算法"><a href="#拉格朗日插值算法" class="headerlink" title="拉格朗日插值算法"></a>拉格朗日插值算法</h2><p>源代码：</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token triple-quoted-string string">'''
-Lagrange Interpolation
-Implement Lagrange interpolation using Python
-Author:Tu ZhiMing
-'''</span>
-
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-
-<span class="token keyword">class</span> <span class="token class-name">Lagrange</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">'''
-    Lagrange Interpolation Class
-    '''</span>
-    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x <span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token punctuation">:</span>
-
-        self<span class="token punctuation">.</span>x <span class="token operator">=</span> x
-        self<span class="token punctuation">.</span>y <span class="token operator">=</span> y
-
-        self<span class="token punctuation">.</span>nx <span class="token operator">=</span> len<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-        self<span class="token punctuation">.</span>yk <span class="token operator">=</span> y
-        self<span class="token punctuation">.</span>lk_den <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span>
-
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> i<span class="token operator">==</span>j<span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                self<span class="token punctuation">.</span>lk_den<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*=</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-
-    <span class="token keyword">def</span> <span class="token function">calc</span><span class="token punctuation">(</span>self <span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> x <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>x<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> None
-        <span class="token keyword">elif</span> x <span class="token operator">></span> self<span class="token punctuation">.</span>x<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> None
-
-        lk_num <span class="token operator">=</span> np<span class="token punctuation">.</span>ones<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span>
-        y <span class="token operator">=</span> <span class="token number">0.0</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>self<span class="token punctuation">.</span>nx<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> i<span class="token operator">==</span>j<span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                lk_num<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*=</span> x <span class="token operator">-</span>self<span class="token punctuation">.</span>x<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
-            y <span class="token operator">+=</span> self<span class="token punctuation">.</span>yk<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> lk_num<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">/</span>self<span class="token punctuation">.</span>lk_den<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-        <span class="token keyword">return</span> y
-
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true"># example #1: x**2</span>
-    xp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
-    yp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">,</span> <span class="token number">9.0</span><span class="token punctuation">]</span>
-    x <span class="token operator">=</span> <span class="token number">1.5</span>
-    Lagrange1 <span class="token operator">=</span> Lagrange<span class="token punctuation">(</span>xp<span class="token punctuation">,</span>yp<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nExample #1: "</span><span class="token punctuation">)</span>
-    zipped_x_y <span class="token operator">=</span> list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given points: "</span><span class="token punctuation">,</span> zipped_x_y<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"interpolated y value = %.3f at x = %.3f"</span><span class="token operator">%</span> <span class="token punctuation">(</span>Lagrange1<span class="token punctuation">.</span>calc<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">#example #2: x**3</span>
-    xp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">3.0</span><span class="token punctuation">]</span>
-    yp <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">8.0</span><span class="token punctuation">,</span> <span class="token number">27.0</span><span class="token punctuation">]</span>
-    x <span class="token operator">=</span> <span class="token number">2.5</span>
-    Lagrange2 <span class="token operator">=</span> Lagrange<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nExample #2: "</span><span class="token punctuation">)</span>
-    zipped_x_y <span class="token operator">=</span> list<span class="token punctuation">(</span>zip<span class="token punctuation">(</span>xp<span class="token punctuation">,</span> yp<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Given points: "</span><span class="token punctuation">,</span> zipped_x_y<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"interpolated y value = %.3f at x = %.3f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>Lagrange2<span class="token punctuation">.</span>calc<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>运行结果：</p>
-<pre class="line-numbers language-python"><code class="language-python">Example <span class="token comment" spellcheck="true">#1: </span>
-Given points<span class="token punctuation">:</span>  <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">9.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-interpolated y value <span class="token operator">=</span> <span class="token number">2.250</span> at x <span class="token operator">=</span> <span class="token number">1.500</span>
-
-Example <span class="token comment" spellcheck="true">#2: </span>
-Given points<span class="token punctuation">:</span>  <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1.0</span><span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">2.0</span><span class="token punctuation">,</span> <span class="token number">8.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">27.0</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
-interpolated y value <span class="token operator">=</span> <span class="token number">16.000</span> at x <span class="token operator">=</span> <span class="token number">2.500</span>
-
-Process finished <span class="token keyword">with</span> exit code <span class="token number">0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -1039,7 +939,7 @@ Process finished <span class="token keyword">with</span> exit code <span class="
                     </span>
                     <a href="https://tuzhiming.github.io" class="b-link-green">涂志明の博客</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/11/18/lagrange-interpolation/" class="b-link-green">Lagrange Interpolation</a>
+                    <a href="/2019/11/26/mpc/" class="b-link-green">MPC</a>
                 </p>
             </div>
 
@@ -1061,46 +961,38 @@ Process finished <span class="token keyword">with</span> exit code <span class="
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/20/3-yun-yong-yun-dong-xue-mo-xing-shi-xian-lu-jing-gen-zong.assets/">
+                <a href="/2019/11/26/mpc/">
                     <div class="card-image">
                         
+                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="MPC">
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="运用运动学模型实现路径跟踪">
-                        
-                        <span class="card-title">运用运动学模型实现路径跟踪</span>
+                        <span class="card-title">MPC</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            路径跟踪——基于运动学模型
+                            
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-26
+                            </span>
                         <span class="publish-author">
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Control/" target="_blank">
-                        <span class="chip bg-color">Control</span>
-                    </a>
-                    
-                    <a href="/tags/Translation/" target="_blank">
-                        <span class="chip bg-color">Translation</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1111,25 +1003,32 @@ Process finished <span class="token keyword">with</span> exit code <span class="
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/15/shi-jian-ji-chu/">
+                <a href="/2019/11/26/ai-er-mi-te-cha-zhi/">
                     <div class="card-image">
                         
-                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="线控转向基础知识">
+                        <img src="/medias/banner/7.jpg" class="responsive-img" alt="埃尔米特插值">
                         
-                        <span class="card-title">线控转向基础知识</span>
+                        <span class="card-title">埃尔米特插值</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            线控转向系统(SBW) 线控底盘技术 自动驾驶关键技术
+                            这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-15
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-26
                             </span>
                         <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/软件安装与配置/" class="post-category" target="_blank">
+                                    软件安装与配置
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -1137,16 +1036,16 @@ Process finished <span class="token keyword">with</span> exit code <span class="
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vehicle/" target="_blank">
-                        <span class="chip bg-color">Vehicle</span>
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/自动驾驶/" target="_blank">
-                        <span class="chip bg-color">自动驾驶</span>
+                    <a href="/tags/Github/" target="_blank">
+                        <span class="chip bg-color">Github</span>
                     </a>
                     
-                    <a href="/tags/线控底盘/" target="_blank">
-                        <span class="chip bg-color">线控底盘</span>
+                    <a href="/tags/博客/" target="_blank">
+                        <span class="chip bg-color">博客</span>
                     </a>
                     
                 </div>
@@ -1294,6 +1193,13 @@ Process finished <span class="token keyword">with</span> exit code <span class="
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
         <footer class="page-footer bg-color">
